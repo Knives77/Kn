@@ -94,7 +94,7 @@ function setup() {
 function draw() {
   background(0);
   for (let raven of ravens) {
-    raven.show();
-    raven.animate();
+    raven.show(p5);
+    raven.animate(p5);
   }
 }
