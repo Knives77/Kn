@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: 'Bruno Ace SC', cursive;
+}
+.center {
+    margin-top: 50px;
+    text-align: center;
+}
+#xy {
+    font-size: 30px;
+    color: white;
+}
+
+h1 {
+    font-family: 'Bruno Ace SC', cursive;
+}

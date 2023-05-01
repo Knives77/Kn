@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/TBL.css" />
+    <title>Tabla</title>
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <h3>Tabla de Multiplicar</h3>
+    <div class="format" id="identificador">
+      <ul id="tab"></ul>
+      <label for="nume">Número : </label>
+      <input type="txt" value="" id="nume" />
+      <br />
+      <button
+        type="submit"
+        id="boton"
+        onclick="tabla()"
+        style="margin-left: 107px"
+      >
+        Mostrar
+      </button>
+      <button type="reset" onclick="limpiar()">Reset</button>
+      <button type="submit" id="boton2" onclick="tabla2()">1-10</button>
+      <button type="submit" id="boton3" onclick="test()">test</button>
+    </div>
+    <script>
+      const tabl = document.getElementById("tab");
+
+      // let n = prompt("Ingresa a numero de tabla : ", 1);
+
+      const input = () => {
+        const numero = document.getElementById("nume").value;
+        return numero;
+      };
+
+      const tabla = () => {
+        tabl.innerHTML = ` <h3>" Tabla del ${input()} "<h3>`;
+        for (let index = 1; index <= 10; index++) {
+          let p = input() * index;
+          tabl.innerHTML += `<li> <pre>${input()} * ${index} = ${p} </pre></li>`;
+          p = 0;
+        }
+        tabl.innerHTML += `<br>`;
+      };
+
+      const tabla2 = () => {
+        tabl.style.fontSize = "25px";
+        for (let xd = 1; xd <= 10; xd++) {
+          tabl.innerHTML += ` <h3>" Tabla del ${xd} "<h3>`;
+          for (let index = 1; index <= 10; index++) {
+            let p = xd * index;
+            tabl.innerHTML += `<li> <pre>${xd} * ${index} = ${p} </pre></li>`;
+            p = 0;
+          }
+          tabl.innerHTML += `<br>`;
+        }
+      };
+      const test = () => {
+        const xd = document.getElementById("tab");
+        tabl.style.width = "2000px";
+        for (let index = 1; index <= 10; index++) {
+          for (let i = 1; i <= 10; i++) {
+            xd.innerHTML += `
+              <div style="float: left">
+              Pene  
+              </div>
+            `
+          }
+        }
+      };
+
+      const limpiar = () => {
+        tabl.innerHTML = "";
+      };
+    </script>
+  </body>
+</html>
