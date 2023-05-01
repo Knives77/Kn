@@ -1,5 +1,5 @@
-import { sub, retry, lives } from "./modules/aña.js";
-import Sprite from "./modules/aña2.js";
+import { sub, retry, lives } from "./modules/modulo1.js";
+import  Sprite  from "./modules/modulo2.js";
 
 new p5(function (p5) {
     let spritesheet;
@@ -48,3 +48,4 @@ new p5(function (p5) {
         }
     }
 });
+
