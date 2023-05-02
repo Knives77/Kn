@@ -4,19 +4,19 @@ let bonus;
 let numero = 7;
 let money;
 let apuesta;
+let img;
 
 const juego = () => {
   a = parseInt(Math.random() * 20 + 1);
   b = parseInt(Math.random() * 20 + 1);
   c = parseInt(Math.random() * 20 + 1);
 
-
   fill("#d9c3f7");
+  textFont(myFont);
   textSize(44);
   text("a: " + a, 30, 50);
   text("b: " + b, 150, 50);
   text("c: " + c, 270, 50);
-
 
   if (money === 0) {
     alert("lose");
@@ -40,8 +40,10 @@ const juego = () => {
 };
 
 function setup() {
-  const canvas = createCanvas(1000, 300);
+  const canvas = createCanvas(1000, 400, WEBGL);
   canvas.parent("#cont");
+  myFont = loadFont("img/Titillium_Web/TitilliumWeb-Light.ttf");
+  img = loadImage("img/rosadita.jpg");
   background("black");
 }
 
@@ -60,8 +62,24 @@ function draw() {
     const b = parseInt(document.getElementById("apuesta").value);
     return (
       (document.getElementById("aña2").innerHTML = `${b}`),
-      (apuesta = b) /*, document.getElementById("ap").disabled = true,*/, clear(),
+      (apuesta = b) /*, document.getElementById("ap").disabled = true,*/,
+      clear(),
       juego()
     );
   };
+  pne();
+}
+
+function pne() {
+  background(0)
+  noStroke();
+  push();
+  translate(300, 10);
+  rotateZ(frameCount * 0.02);
+  rotateX(frameCount * 0.02);
+  rotateY(frameCount * 0.02);
+  texture(img);
+  //normalMaterial();
+  box(130);
+  pop();
 }
