@@ -1,42 +1,56 @@
 //Apuesta y presupuesto
 
-let bonus;
+let bonus = 0;
 let numero = 7;
 let money;
 let apuesta;
 let img;
 
+let a1 = "?", b1 = "?", c1 = "?";
+
 const juego = () => {
   a = parseInt(Math.random() * 20 + 1);
   b = parseInt(Math.random() * 20 + 1);
   c = parseInt(Math.random() * 20 + 1);
-
-  fill("white");
-  textFont(myFont);
-  textSize(44);
-  text("a: " + a, -450, -150);
-  text("b: " + b, -350, -150);
-  text("c: " + c, -250, -150);
-
   if (money === 0) {
     alert("lose");
   } else {
     if (money >= apuesta) {
       if (a === numero || b === numero || c === numero) {
-        alert("Ganaste " + (apuesta + apuesta));
-        apuesta += apuesta;
-        document.getElementById("aña1").innerHTML = `${money + apuesta}`;
-        console.log(apuesta);
+        if (bonus <= 0) {
+          alert("Ganaste " + (apuesta + apuesta));
+          apuesta += apuesta;
+          document.getElementById("aña1").innerHTML = `${money + apuesta}`;
+          bonus++;
+          console.log(apuesta);
+        }
+        else if (bonus == 2) {
+          alert("Ganaste " + (apuesta + apuesta));
+          apuesta += apuesta * 2;
+          document.getElementById("aña1").innerHTML = `${money + apuesta}`;
+          bonus++;
+          console.log(apuesta);
+        }
+        else if (bonus >= 3) {
+          alert("Ganaste " + (apuesta + apuesta));
+          apuesta += apuesta * 3;
+          document.getElementById("aña1").innerHTML = `${money + apuesta}`;
+          console.log(apuesta);
+        }
       } else {
         alert("Perdiste :c " + apuesta);
         money -= apuesta;
         console.log(money);
         document.getElementById("aña1").innerHTML = `${money}`;
+        bonus = 0;
       }
     } else {
       alert("Fondo insuficiente");
+      fill("white");
+      rect(0,0,500,500)
     }
   }
+  return a1 = a, b1 = b, c1 = c;
 };
 
 function setup() {
@@ -64,14 +78,25 @@ function draw() {
       (document.getElementById("aña2").innerHTML = `${b}`),
       (apuesta = b) /*, document.getElementById("ap").disabled = true,*/,
       clear(),
-      juego()
+      juego(),
+      pene2("white")
     );
   };
-  //pne();
+  pne();
+  pene2("white");
+}
+
+function pene2(color) {
+  fill(color);
+  textFont(myFont);
+  textSize(80);
+  text("a: " + a1, -500, -20);
+  text("b: " + b1, -300, -20);
+  text("c: " + c1, -100, -20);
 }
 
 function pne() {
-  background(0)
+  background(0);
   noStroke();
   push();
   translate(300, 10);
