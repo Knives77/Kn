@@ -11,12 +11,12 @@ const juego = () => {
   b = parseInt(Math.random() * 20 + 1);
   c = parseInt(Math.random() * 20 + 1);
 
-  fill("#d9c3f7");
+  fill("white");
   textFont(myFont);
   textSize(44);
-  text("a: " + a, 30, 50);
-  text("b: " + b, 150, 50);
-  text("c: " + c, 270, 50);
+  text("a: " + a, -450, -150);
+  text("b: " + b, -350, -150);
+  text("c: " + c, -250, -150);
 
   if (money === 0) {
     alert("lose");
@@ -67,7 +67,7 @@ function draw() {
       juego()
     );
   };
-  pne();
+  //pne();
 }
 
 function pne() {
