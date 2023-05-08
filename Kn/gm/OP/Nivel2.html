@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body background="ggg.jpg">
+    <div class="parte1">
+        <h1>Operaciones (Nivel 2)</h1>
+        <h2> Por usuario</h2>
+        <div class="resv" id="resv"></div> 
+        <div id="esc" class="resv">¿Es coge una?</div>
+        <br> <br>
+        <button id="ju1" onclick="getAle1();">Jugar suma, resta</button> 
+        <button id="ju2" onclick="getAle2();">Jugar Multiplicacion y Division </button>
+        <br><br>
+        <center>
+        <button style="display: none" id="g" onclick="g();">Generar numeros</button> 
+        <button style="display: none" id="g2" onclick="g2();">Generar numeros</button>
+    </center>
+        <br> <br> <br>
+        <div id="M" style="display: none">
+        <label class="c" for="">Numero 1:</label>  
+        <input type="text" id="num3"> 
+        <br>
+        <label class="c" for="">Numero 2:</label>
+        <input type="text " id="num4">
+        <br> <br>
+        <select name="" id="operador2">
+             <option id="s" style="display: none" value="+">+</option>
+             <option id="rs" style="display: none" value="-">-</option>
+             <option id="xx" style="display: none" value="*">*</option>
+             <option id="di" style="display: none" value="/">/</option>
+        </select>
+        <button id="c" onclick="calcularOp2();">Comprobar</button>
+       <input type="text " id="result2">
+       <br>
+       <br>
+       <button style="display: none" id="regre" onclick="regre();">Regresar otra Operacio</button>
+       <br><br> <br>
+       <a href="opera1,2,3.html"><button>Regresar a la pagina principal</button></a>
+       <br>
+    </div>
+    </div>
+    <script src="nivel2.js"></script>
+</body>
+</html>
