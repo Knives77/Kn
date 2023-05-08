@@ -4,6 +4,7 @@ import  Sprite  from "./modules/modulo2.js";
 new p5(function (p5) {
     let spritesheet;
     let spritedata;
+    let tema;
     let animations = [];
     let ravens = [];
 
@@ -46,6 +47,9 @@ new p5(function (p5) {
             raven.show(p5);
             raven.animate(p5);
         }
+        p5.fill("white")
+        p5.textSize(40);
+        p5.text("Vidas: " + lives, 320, 70);
     }
 });
 

@@ -90,9 +90,9 @@ function pene2(color) {
   fill(color);
   textFont(myFont);
   textSize(80);
-  text("a: " + a1, -500, -20);
-  text("b: " + b1, -300, -20);
-  text("c: " + c1, -100, -20);
+  text(a1, -500, -20);
+  text(b1, -300, -20);
+  text(c1, -100, -20);
 }
 
 function pne() {

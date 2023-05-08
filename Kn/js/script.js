@@ -9,12 +9,8 @@ function iff(dir) {
 }
 
 function setup() {
-  const canvas = createCanvas(aside.clientWidth, aside.clientHeight);
-  canvas.parent("#inf");
 }
 
 function draw() {
-  fill("black");
-  noStroke();
-  rect(0, 0, aside.clientWidth, aside.clientHeight);
+
 }

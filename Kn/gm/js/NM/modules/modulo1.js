@@ -1,6 +1,6 @@
 export const max = 10;
-export let lives = 5;
-export const random1 = Math.floor(1 + Math.random() * max);
+export let lives = 3;
+export const random1 = Math.floor(Math.random() * max + 1);
 console.log(random1);
 
 export function sub() {
@@ -22,11 +22,12 @@ export function sub() {
     }
   } else if (value == random1) {
     alert("Le atinaste");
+    location.reload();
   }
 }
 
 export function retry() {
-  lives = 5;
+  lives = 3;
   if (lives > 0) {
     document.getElementById("d").disabled = true;
     document.getElementById("c").disabled = false;
